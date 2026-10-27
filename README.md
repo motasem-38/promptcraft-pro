@@ -2,6 +2,8 @@
 
 PromptCraft Pro is a portable model-aware prompt-engineering skill. Install it into a supported LLM harness, then ask it to design, adapt, or evaluate prompts.
 
+PromptCraft Pro is open source and available for anyone to use, inspect, modify, and redistribute under the [MIT License](LICENSE).
+
 ## Install
 
 ### Any agent supported by skills.sh
@@ -63,6 +65,7 @@ This folder contains the public-facing informational pages for PromptCraft Pro, 
 - `privacy.html` — narrow privacy statement for PromptCraft Pro itself
 - `terms.html` — terms of service
 - `skills/promptcraft-pro/SKILL.md` — installable skill definition
+- `LICENSE` — MIT open-source license
 - `assets/style.css` — shared responsive styling
 
 ## Sources
