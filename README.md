@@ -1,4 +1,58 @@
-# PromptCraft Pro — GitHub Pages site
+# PromptCraft Pro
+
+PromptCraft Pro is a portable model-aware prompt-engineering skill. Install it into a supported LLM harness, then ask it to design, adapt, or evaluate prompts.
+
+## Install
+
+### Any agent supported by skills.sh
+
+```bash
+npx skills@latest add https://github.com/motasem-38/promptcraft-pro --skill promptcraft-pro
+```
+
+To install for a specific agent, add its agent name:
+
+```bash
+npx skills@latest add https://github.com/motasem-38/promptcraft-pro --skill promptcraft-pro -a claude-code
+```
+
+### Claude Code
+
+```bash
+npx skills@latest add https://github.com/motasem-38/promptcraft-pro --skill promptcraft-pro -a claude-code
+```
+
+### Codex
+
+```bash
+npx skills@latest add https://github.com/motasem-38/promptcraft-pro --skill promptcraft-pro -a codex
+```
+
+### GitHub Copilot
+
+```bash
+npx skills@latest add https://github.com/motasem-38/promptcraft-pro --skill promptcraft-pro -a copilot
+```
+
+### Gemini CLI
+
+```bash
+gemini skills install https://github.com/motasem-38/promptcraft-pro.git --path skills/promptcraft-pro
+```
+
+The exact command and supported agent name can vary by the harness version. Use the repository link if your tool has an "install skill from GitHub" action.
+
+## What it does
+
+The `promptcraft-pro` skill helps an LLM:
+
+- clarify the goal, inputs, constraints, and risk level
+- produce a ready-to-copy prompt
+- adapt prompts to a named model or platform
+- add verification checks, test cases, and human review steps
+- avoid invented context and unsupported guarantees
+
+The skill does not call model APIs, collect user information, or require credentials.
 
 This folder contains the public-facing informational pages for PromptCraft Pro, published by **Motasem Abumoghli**, individual developer.
 
@@ -8,34 +62,30 @@ This folder contains the public-facing informational pages for PromptCraft Pro, 
 - `support.html` — support information
 - `privacy.html` — narrow privacy statement for PromptCraft Pro itself
 - `terms.html` — terms of service
+- `skills/promptcraft-pro/SKILL.md` — installable skill definition
 - `assets/style.css` — shared responsive styling
 
 ## Sources
 
 The site includes official documentation sources for OpenAI, Anthropic, Google Gemini, and xAI. These sources support the model references only; they are not claims about third-party data practices or endorsements.
 
-The local workspace did not contain the existing plugin package, so the pages preserve the identity and capabilities described in the referenced conversation without inventing package-specific commands, contact details, or publication status.
+The installable skill is included in this repository so users can install it directly from GitHub. It does not call model APIs, collect user information, or require credentials.
 
-## Publish with GitHub Pages
+## GitHub Pages
 
-1. Create or open the GitHub repository that will host PromptCraft Pro’s public pages.
-2. Copy the contents of this folder into the repository’s root, preserving the `assets/` directory.
-3. Commit and push the files to the repository’s default branch.
-4. On GitHub, open **Settings → Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select the default branch and the `/ (root)` folder, then choose **Save**.
-7. Wait for the Pages deployment to finish, then open the URL GitHub displays under **Settings → Pages**.
-8. Verify each page directly:
+The public site is served from the `main` branch at:
+
+https://motasem-38.github.io/promptcraft-pro/
+
+Verify each page directly:
    - `/index.html`
    - `/support.html`
    - `/privacy.html`
    - `/terms.html`
-9. Use the verified HTTPS URLs in the plugin’s public listing fields. Do not use these pages as evidence that the plugin itself is public until the plugin publication is separately verified.
 
-## Before publication
+## Before changing the distribution
 
 - Replace the support placeholder with a real support URL or contact method supplied by the publisher.
-- Confirm that the publisher wants the October 28, 2026 effective dates.
 - Review the terms and privacy language for the publisher’s jurisdiction and intended distribution channel.
 - Check the live pages on mobile and desktop after GitHub Pages finishes deploying.
 
