@@ -1,0 +1,4 @@
+interface:
+  display_name: "PromptCraft Pro"
+  short_description: "Create clearer, better prompts"
+  default_prompt: "Use $promptcraft-pro to design, adapt, or evaluate my prompt and add concrete verification checks."

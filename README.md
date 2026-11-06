@@ -6,6 +6,20 @@ PromptCraft Pro is open source and available for anyone to use, inspect, modify,
 
 ## Install
 
+### ChatGPT / Codex Plugin
+
+Version 1.0.0 packages the original skill unchanged as an Agent Plugins 1.0
+plugin with a custom icon and public-directory metadata.
+
+- [Publication guide (Arabic)](docs/PUBLISHING.ar.md).
+- [Host acceptance checks and current test status](docs/SMOKE-TESTS.md).
+
+The distributable ZIP is separate from this source directory. Build it with
+`python scripts/build_plugin.py ../promptcraft-pro-1.0.0.zip`.
+A development installation does not publish the plugin in the public directory.
+The public ZIP requires developer verification, portal scans, review, and a
+separate publish action. No MCP server, OAuth setup, or API key is required.
+
 ### Any agent supported by skills.sh
 
 ```bash
@@ -88,7 +102,7 @@ Verify each page directly:
 
 ## Before changing the distribution
 
-- Replace the support placeholder with a real support URL or contact method supplied by the publisher.
+- Support uses the repository's enabled public issue tracker; do not post private information there.
 - Review the terms and privacy language for the publisher’s jurisdiction and intended distribution channel.
 - Check the live pages on mobile and desktop after GitHub Pages finishes deploying.
 

@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "promptcraft-pro",
+  "version": "1.0.0",
+  "description": "Design, adapt, and evaluate clear, bounded, testable prompts for your target language model.",
+  "author": {"name": "Motasem Abumoghli"},
+  "homepage": "https://motasem-38.github.io/promptcraft-pro/",
+  "repository": "https://github.com/motasem-38/promptcraft-pro",
+  "license": "MIT",
+  "keywords": ["prompts", "prompt-engineering", "evaluation", "productivity"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "PromptCraft Pro",
+        "shortDescription": "Create clearer, better prompts",
+        "longDescription": "Create, improve, adapt, and evaluate prompts for your target language model. PromptCraft Pro clarifies goals, audience, inputs, constraints, output format, and risk; produces a ready-to-copy prompt; and adds concrete verification checks. For important workflows, it helps define representative tests, failure conditions, and human review. Model-specific advice relies on current documentation when available. It runs as a skill in your host assistant: it does not call other model APIs, run cross-model benchmarks, or guarantee outcomes. Free and open source under the MIT License.",
+        "developerName": "Motasem Abumoghli",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": [
+          "Turn my goal into a self-contained prompt with a clear output format and verification checks.",
+          "Improve this prompt for my target model while preserving my constraints and terminology.",
+          "Evaluate this prompt and propose representative test cases and failure conditions."
+        ],
+        "websiteURL": "https://motasem-38.github.io/promptcraft-pro/",
+        "supportURL": "https://github.com/motasem-38/promptcraft-pro/issues",
+        "privacyPolicyURL": "https://motasem-38.github.io/promptcraft-pro/privacy.html",
+        "termsOfServiceURL": "https://motasem-38.github.io/promptcraft-pro/terms.html",
+        "logo": "./assets/icon.png",
+        "composerIcon": "./assets/icon.png"
+      },
+      "review": {
+        "prompts": [
+          "اكتب لي prompt لتحويل ملاحظات اجتماع إلى قرارات ومهام بصيغة جدول، دون اختراع أسماء أو مواعيد.",
+          "Improve this prompt for ChatGPT: summarize customer feedback. Preserve uncertainty and require evidence from the supplied feedback.",
+          "Evaluate this extraction prompt and propose tests for missing fields, conflicting instructions in the source, and invalid output."
+        ],
+        "commerce": false,
+        "commerce_description": "Free to use; no products, purchases, checkout, or payment processing."
+      },
+      "publication": {
+        "release_notes": "Initial plugin release. Packages the original PromptCraft Pro skill unchanged, with listing metadata and a custom icon. Free, MIT-licensed, available in all supported countries.",
+        "countries": []
+      }
+    }
+  }
+}
