@@ -10,14 +10,14 @@ PromptCraft Pro is open source and available for anyone to use, inspect, modify,
 
 ### Claude Code Native Slash Command & Skill (Quick Install)
 
-Once version 1.0.0 is published to npm, install the skill and native `/promptcraft`
+Install the skill and native `/promptcraft`
 command into your project's `.claude/` directory:
 
 ```bash
 npx promptcraft-pro@1.0.0
 ```
 
-Before npm publication, install from a local checkout with `node /path/to/promptcraft-pro/bin/cli.js`
+Alternatively, install from a local checkout with `node /path/to/promptcraft-pro/bin/cli.js`
 while in your target project. The installer copies the skill and its supporting files
 and replaces existing PromptCraft Pro files. Run `/promptcraft <your request>` in Claude Code.
 
