@@ -4,7 +4,7 @@
   "description": "Portable model-aware prompt-engineering skill and verification standard for AI coding harnesses (Claude Code, Codex, Copilot, Gemini CLI).",
   "main": "bin/cli.js",
   "bin": {
-    "promptcraft-pro": "./bin/cli.js"
+    "promptcraft-pro": "bin/cli.js"
   },
   "scripts": {
     "build:zip": "mkdir -p dist && python3 scripts/build_plugin.py ./dist/promptcraft-pro-1.0.0.zip",
