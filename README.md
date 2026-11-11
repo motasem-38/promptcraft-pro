@@ -1,10 +1,26 @@
 # PromptCraft Pro
 
+[![Verify Package & Build Artifact](https://github.com/motasem-38/promptcraft-pro/actions/workflows/ci.yml/badge.svg)](https://github.com/motasem-38/promptcraft-pro/actions/workflows/ci.yml)
+
 PromptCraft Pro is a portable model-aware prompt-engineering skill. Install it into a supported LLM harness, then ask it to design, adapt, or evaluate prompts.
 
 PromptCraft Pro is open source and available for anyone to use, inspect, modify, and redistribute under the [MIT License](LICENSE).
 
 ## Install
+
+### Claude Code Native Slash Command & Skill (Quick Install)
+
+Once version 1.0.0 is published to npm, install the skill and native `/promptcraft`
+command into your project's `.claude/` directory:
+
+```bash
+npx promptcraft-pro@1.0.0
+```
+
+Before npm publication, install from a local checkout with `node /path/to/promptcraft-pro/bin/cli.js`
+while in your target project. The installer copies the skill and its supporting files
+and replaces existing PromptCraft Pro files. Run `/promptcraft <your request>` in Claude Code.
+
 
 ### ChatGPT / Codex Plugin
 
@@ -14,7 +30,8 @@ plugin with a custom icon and public-directory metadata.
 - [Publication guide (Arabic)](docs/PUBLISHING.ar.md).
 - [Host acceptance checks and current test status](docs/SMOKE-TESTS.md).
 
-The distributable ZIP is separate from this source directory. Build it with
+The distributable ZIP can be built in the ignored `dist/` directory with
+`npm run build:zip`, or outside this source directory with
 `python scripts/build_plugin.py ../promptcraft-pro-1.0.0.zip`.
 A development installation does not publish the plugin in the public directory.
 The public ZIP requires developer verification, portal scans, review, and a

@@ -1,0 +1,29 @@
+name: Verify Package & Build Artifact
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify CLI & Skill Integrity
+        run: node bin/cli.js --check
+      - name: Build Distributable Plugin ZIP
+        run: |
+          mkdir -p dist
+          python3 scripts/build_plugin.py ./dist/promptcraft-pro-1.0.0.zip
+          test -f ./dist/promptcraft-pro-1.0.0.zip

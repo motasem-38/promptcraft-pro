@@ -15,7 +15,8 @@ FILES = [
 def build(destination):
     manifest = json.loads((ROOT / "plugin.json").read_text())
     assert manifest["name"] == ROOT.name
-    assert not destination.resolve().is_relative_to(ROOT.resolve()), "Write the archive outside its source directory"
+    assert (not destination.resolve().is_relative_to(ROOT.resolve())
+            or destination.resolve().is_relative_to((ROOT / "dist").resolve())), "Write the archive outside the source directory or inside dist/"
     destination.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(destination, "w", zipfile.ZIP_DEFLATED) as archive:
         for relative in FILES:

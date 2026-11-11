@@ -1,0 +1,41 @@
+{
+  "name": "promptcraft-pro",
+  "version": "1.0.0",
+  "description": "Portable model-aware prompt-engineering skill and verification standard for AI coding harnesses (Claude Code, Codex, Copilot, Gemini CLI).",
+  "main": "bin/cli.js",
+  "bin": {
+    "promptcraft-pro": "./bin/cli.js"
+  },
+  "scripts": {
+    "build:zip": "mkdir -p dist && python3 scripts/build_plugin.py ./dist/promptcraft-pro-1.0.0.zip",
+    "test": "node bin/cli.js --check && npm run build:zip && test -f ./dist/promptcraft-pro-1.0.0.zip"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motasem-38/promptcraft-pro.git"
+  },
+  "homepage": "https://motasem-38.github.io/promptcraft-pro/",
+  "bugs": {
+    "url": "https://github.com/motasem-38/promptcraft-pro/issues"
+  },
+  "keywords": [
+    "claude-code",
+    "prompt-engineering",
+    "ai-agents",
+    "mcp",
+    "llm-verification",
+    "codex",
+    "gemini-cli",
+    "agent-skills"
+  ],
+  "author": "Motasem Abumoghli <abumoghli.6@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "bin/",
+    "skills/",
+    ".claude/",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md"
+  ]
+}
